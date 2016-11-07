@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+		<title>Ankieta</title>
+		<link rel="stylesheet" href="bootstrap.css">
+		<link rel="stylesheet" href="strona.css">
+		<script type="text/javascript" src="strona.js"></script>
+		<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <style>
+        
+        </style>
+	</head>
+	<body onload="colorCheckedFields()" bgcolor="#4d4c4c">
+        <form method="POST">
+            <div align="center"><h1 class="colorText">Wybierz ulubione kolory:</h1><br></br></div>
+			<section id="wrapper">
+				<div id="left" align="center">
+					<label class="labelClass"><input type="checkbox" id="red" name="red" onclick="changeColor()"> Czerwony</label><br>
+					<label class="labelClass"><input type="checkbox" id="blue" name="blue" onclick="changeColor()"> Niebieski</label><br>
+					<label class="labelClass"><input type="checkbox" id="green" name="green" onclick="changeColor()"> Zielony</label><br>
+				</div>
+				<div id="right" align="center">
+					<label class="labelClass"><input type="checkbox" id="yellow" name="yellow" onclick="changeColor()"> Żółty</label><br>
+					<label class="labelClass"><input type="checkbox" id="white" name="white" onclick="changeColor()"> Biały</label><br>
+					<label class="labelClass"><input type="checkbox" id="black" name="black" onclick="changeColor()"> Czarny</label>
+				</div>	
+			</section>
+		</form>
+		<div align="center">
+			<button type="button" class="btn btn-success sharp" onclick="saveFirstQuestionToLocalStorage(); window.location.href='strona2.html'">Dalej</button>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+		<title>Ankieta</title>
+		<link rel="stylesheet" href="bootstrap.css">
+		<link rel="stylesheet" href="strona.css">
+		<script type="text/javascript" src="strona.js"></script>
+		<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <style>
+        
+        </style>
+	</head>
+	<body onload="colorCheckedFields()" bgcolor="#4d4c4c">
+        <form action="strona.php" method="POST">
+            <div align="center"><h1 class="colorText">Wybierz ulubione kolory:</h1><br></br></div>
+			<section id="wrapper">
+				<div id="left" align="center">
+					<label class="labelClass"><input type="radio" id="1" name="radio" value=1 onclick="colorCheckedFields()"> Czerwony!</label><br>
+					<label class="labelClass"><input type="radio" id="2" name="radio" value=2 onclick="colorCheckedFields()"> Niebieski</label><br>
+					<label class="labelClass"><input type="radio" id="3" name="radio" value=3 onclick="colorCheckedFields()"> Zielony</label><br>
+				</div>
+				<div id="right" align="center">
+					<label class="labelClass"><input type="radio" id="4" name="radio" value=4 onclick="colorCheckedFields()"> Żółty</label><br>
+					<label class="labelClass"><input type="radio" id="5" name="radio" value=5 onclick="colorCheckedFields()"> Biały</label><br>
+					<label class="labelClass"><input type="radio" id="6" name="radio" value=6 onclick="colorCheckedFields()"> Czarny</label>
+				</div>
+			</section>
+			<div align="center">
+				
+			</div>
+        </form>
+				<div align="center">
+					<button type="button" id="button3" class="btn btn-success sharp" onclick="saveSecondQuestionToLocalStorage(); sendPOST();">Dalej</button>
+		</div>
+	</body>
+</html>

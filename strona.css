@@ -1,0 +1,54 @@
+body {
+	background-color: #7a9e35;
+}
+
+label {
+    width: 260px;
+	font-size: 300%;
+}
+
+#wrapper {
+	display: flex;
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+	margin: 20px;
+}
+#left {
+	flex: 0 45% 45%;
+}
+#right {
+	flex: 0;
+}
+
+.colorText {
+	color: #46650B;
+}
+
+.sharp {
+	border-radius: 0px;
+}
+
+.textBoxWidth {
+	width: 60%;
+}
+
+.labelClass {
+	background-color: #7a9e35;
+	text-align: left;
+	border: 1px solid #46650B;
+	cursor:pointer;
+	-webkit-transition: linear 0.3s; /* Safari */
+    transition: linear 0.3s;
+	color: #46650B;
+}
+
+.labelClass.color {
+	background-color: #46650B;
+	color: #7a9e35;
+}
+
+@media only screen and (orientation : portrait) {
+	#wrapper {
+		display: inline;
+	}
+}
