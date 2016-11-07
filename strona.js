@@ -19,6 +19,7 @@ var checkCheckedFields = function() {
 
 var colorCheckedFields = function() {
     checkCheckedFields();
+    saveFirstQuestionToLocalStorage();
 	$('input').each(function(a,b){ if(a.checked){a.parentNode.className = "labelClass color"}});
 	var inputsChecked = $('input:checked');
 	var inputsNotChecked = $('input:radio:not(:checked)');
@@ -30,17 +31,21 @@ var colorCheckedFields = function() {
 	}
 }
 
-var changeColor = function() {
-	$(event.target).closest('.labelClass').toggleClass('color');	
+var saveFirstQuestionToLocalStorage = function() {
+    $('input').each(function(){
+        var elementId = $(this).attr('id');
+        if(document.getElementById(elementId).checked){
+            localStorage.setItem(elementId, "true");
+        }
+        else{
+            localStorage.setItem(elementId, "false");
+        }
+    })
 }
 
-var saveFirstQuestionToLocalStorage = function() {
-	localStorage.setItem("red", JSON.stringify((document.getElementById("red")).checked));
-	localStorage.setItem("blue", JSON.stringify((document.getElementById("blue")).checked));
-	localStorage.setItem("green", JSON.stringify((document.getElementById("green")).checked));
-	localStorage.setItem("yellow", JSON.stringify((document.getElementById("yellow")).checked));
-	localStorage.setItem("white", JSON.stringify((document.getElementById("white")).checked));
-	localStorage.setItem("black", JSON.stringify((document.getElementById("black")).checked));
+var changeColor = function() {
+	$(event.target).closest('.labelClass').toggleClass('color');
+    saveSecondQuestionToLocalStorage();
 }
 
 var saveSecondQuestionToLocalStorage = function() { 
