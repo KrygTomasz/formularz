@@ -120,7 +120,7 @@ var sendPOST = function() {
 var getStatistics = function(){
     $.ajax({
         type: 'GET',
-        url: 'http://localhost/formularz/statistics.php',
+        url: 'statistics.php',
         success: function(data){
             stat = $.parseJSON(data);
             var statJSON = $.parseJSON(data);
