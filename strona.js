@@ -116,3 +116,23 @@ var sendPOST = function() {
         window.location.href='strona3.html';
     }
 };
+
+var getStatistics = function(){
+    $.ajax({
+        type: 'GET',
+        url: 'http://localhost/formularz/statistics.php',
+        success: function(data){
+            stat = $.parseJSON(data);
+            var statJSON = $.parseJSON(data);
+            var statString = "";
+            statString += "Czerwony jest ulubionym kolorem " + statJSON['StatRed1'] + " osob. </br>";
+            statString += "Niebieski jest ulubionym kolorem " + statJSON['StatBlue1'] + " osob. </br> ";
+            statString += "Zielony jest ulubionym kolorem " + statJSON['StatGreen1'] + " osob. </br> ";
+            statString += "Żołty jest ulubionym kolorem " + statJSON['StatYellow1'] + " osob. </br> ";
+            statString += "Biały jest ulubionym kolorem " + statJSON['StatWhite1'] + " osob. </br> ";
+            statString += "Czarny jest ulubionym kolorem " + statJSON['StatBlack1'] + " osob. </br> ";
+            $('#stats').append(statString);
+            console.log(statString);
+        }
+    });
+};
