@@ -125,12 +125,12 @@ var getStatistics = function(){
             stat = $.parseJSON(data);
             var statJSON = $.parseJSON(data);
             var statString = "";
-            statString += "Czerwony jest ulubionym kolorem " + statJSON['StatRed1'] + " osob. </br>";
-            statString += "Niebieski jest ulubionym kolorem " + statJSON['StatBlue1'] + " osob. </br> ";
-            statString += "Zielony jest ulubionym kolorem " + statJSON['StatGreen1'] + " osob. </br> ";
-            statString += "Żołty jest ulubionym kolorem " + statJSON['StatYellow1'] + " osob. </br> ";
-            statString += "Biały jest ulubionym kolorem " + statJSON['StatWhite1'] + " osob. </br> ";
-            statString += "Czarny jest ulubionym kolorem " + statJSON['StatBlack1'] + " osob. </br> ";
+            statString += "Czerwony jest ulubionym kolorem " + statJSON['StatRed1'] + " osób. </br>";
+            statString += "Niebieski jest ulubionym kolorem " + statJSON['StatBlue1'] + " osób. </br> ";
+            statString += "Zielony jest ulubionym kolorem " + statJSON['StatGreen1'] + " osób. </br> ";
+            statString += "Żółty jest ulubionym kolorem " + statJSON['StatYellow1'] + " osób. </br> ";
+            statString += "Biały jest ulubionym kolorem " + statJSON['StatWhite1'] + " osób. </br> ";
+            statString += "Czarny jest ulubionym kolorem " + statJSON['StatBlack1'] + " osób. </br> ";
             $('#stats').append(statString);
         }
     });
