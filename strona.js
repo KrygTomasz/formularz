@@ -132,7 +132,6 @@ var getStatistics = function(){
             statString += "Biały jest ulubionym kolorem " + statJSON['StatWhite1'] + " osob. </br> ";
             statString += "Czarny jest ulubionym kolorem " + statJSON['StatBlack1'] + " osob. </br> ";
             $('#stats').append(statString);
-            console.log(statString);
         }
     });
 };
